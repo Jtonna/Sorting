@@ -1,5 +1,7 @@
 # TO-DO: complete the helpe function below to merge 2 sorted arrays
 
+arr = [62, 35, 43, 37, 82, 96, 22, 63, 49, 2, 1, 4, 7, 8, 12, 15]
+
 # The arrays myst be sorted
 def merge( arrA, arrB ):
     num_elements = len( arrA ) + len( arrB )
@@ -60,3 +62,5 @@ def merge_sort( arr ):
 
 
     return arr
+    
+merge_sort(arr)
