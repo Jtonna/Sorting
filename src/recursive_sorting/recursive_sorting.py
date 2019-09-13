@@ -10,11 +10,29 @@ def merge( arrA, arrB ):
     a_index = 0
     b_index = 0
 
+    for i in range(num_elements):
     # for each index in merged array `elements` ...
-        # Find the smalles first-item between arrayA and arrayB
+
+        # Find the smallest first-item between arrayA and arrayB
         # Add that to `elements` at the given index
         # Increment the a_index/b_index counter
+        if a_index >= len(arrA):
+            # 1. A is empty, B is not
+            pass
 
+        elif b_index >= len(arrB):
+            # 2. B is empty, A is not
+            pass
+
+        elif arrA[a_index] < arrB[b_index]:
+            # 3. A has the smaller element
+            pass
+
+        elif arrA[a_index] > arrB[b_index]:
+            # 4. B has the smaller element
+            pass
+
+        pass
     
     return merged_arr
 
