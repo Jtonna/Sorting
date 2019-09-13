@@ -2,8 +2,8 @@
 
 # The arrays myst be sorted
 def merge( arrA, arrB ):
-    elements = len( arrA ) + len( arrB )
-    merged_arr = [0] * elements
+    num_elements = len( arrA ) + len( arrB )
+    merged_arr = [0] * num_elements
     # TO-DO
 
     # Keeps track of the array index
@@ -18,19 +18,23 @@ def merge( arrA, arrB ):
         # Increment the a_index/b_index counter
         if a_index >= len(arrA):
             # 1. A is empty, B is not
-            pass
+            merged_arr[i] = arrB[b_index]
+            b_index += 1
 
         elif b_index >= len(arrB):
             # 2. B is empty, A is not
-            pass
+            merged_arr[i] = arrA[a_index]
+            a_index += 1
 
         elif arrA[a_index] < arrB[b_index]:
             # 3. A has the smaller element
-            pass
+            merged_arr[i] = arrA[a_index]
+            a_index += 1
 
-        elif arrA[a_index] > arrB[b_index]:
+        else: # arrA[a_index] > arrB[b_index]:
             # 4. B has the smaller element
-            pass
+            merged_arr[i] = arrB[b_index]
+            b_index += 1
 
         pass
     
